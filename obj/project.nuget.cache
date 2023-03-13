@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Vfvhms50fM1s7HULHGkmzTKUqnubngOkbeB24JAAJhSEFmUVSO5M93wB20M2uNwAOX+LKbApcaGWvkkbY7Vd+w==",
+  "success": true,
+  "projectFilePath": "/Users/Shared/Projects/Beat Carousel/Beat Carousel.csproj",
+  "expectedPackageFiles": [
+    "/Users/apple/.nuget/packages/raylib-cs/4.2.0.2/raylib-cs.4.2.0.2.nupkg.sha512",
+    "/Users/apple/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
