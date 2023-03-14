@@ -11,10 +11,14 @@ namespace Beat_Carousel{
         public Center center;
         public Player player;
 
+        Sizes sizes;
+
         public Game(int width, int height, string label){
             this.width = width;
             this.height = height;
             this.label = label;
+
+            sizes = new Sizes();
         }
         
         public void Start()
@@ -25,11 +29,8 @@ namespace Beat_Carousel{
             // init the level entities. for now we init them with the window but 
             // scenes system will be implemented soon.
 
-            center = new Center(width, height, ((width + height)/2) * 0.17f, Color.BLACK,
-                                ((width + height)/2) * 0.18f, Color.RED);
-            player = new Player(width, height, ((width + height)/2) * 0.035f, Color.BLACK,
-                                ((width + height)/2) * 0.04f, Color.GREEN, 
-                                ((width + height)/2) * 0.28f, 1f);
+            center = new Center(width, height, Color.BLACK, Color.RED);
+            player = new Player(width, height, Color.BLACK, Color.GREEN, sizes.player_rotation_radius, 1f);
 
             while(!Raylib.WindowShouldClose())
             {
