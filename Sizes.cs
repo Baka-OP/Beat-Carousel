@@ -11,8 +11,8 @@ public class Sizes{
     public float player_inner_radius = ((window_width + window_height)/2) * 0.035f;
     public float player_outer_radius = ((window_width + window_height)/2) * 0.04f;
 
-    public float node_inner_radius;
-    public float node_outer_radius;
+    public float node_inner_radius = ((window_width + window_height)/2) * 0.015f;
+    public float node_outer_radius = ((window_width + window_height)/2) * 0.02f;
 
     public float player_rotation_radius = ((window_width + window_height)/2) * 0.28f;
 }

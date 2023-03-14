@@ -6,23 +6,34 @@ namespace Beat_Carousel.LevelEntities
 {
     public class Node
     {
-        Vector2 position;
+        public float angle_position;
         Color inner_color;
         Color outer_color;
         Sizes sizes;
 
-        public Node(Vector2 pos, Color inner_color, Color outer_color)
+        Vector2 position;
+
+        public Node(float anglepos, Color inner_color, Color outer_color)
         {
-            this.position = pos;
+            this.angle_position = anglepos;
             this.inner_color = inner_color;
             this.outer_color = outer_color;
 
             sizes = new Sizes();
         }
 
-        void Draw()
+        public void Draw()
         {
-            
+            Raylib.DrawCircleV(position, sizes.node_outer_radius, outer_color);
+            Raylib.DrawCircleV(position, sizes.node_inner_radius, inner_color);
+        }
+
+        void SetPosition()
+        {
+            Vector2 rotatedPosition = new Vector2(MathF.Sin(angle_position), MathF.Cos(angle_position)) * sizes.player_rotation_radius;
+            //HARDCODED THE WINDOW SIZES FOR NOW BECAUSE I AM IRRITATED
+            Vector2 offset = new Vector2(800/2, 600/2);
+            position = rotatedPosition + offset;
         }
     }
 }
